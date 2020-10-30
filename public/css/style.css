@@ -1,0 +1,441 @@
+/*fonts*/
+
+@font-face {
+  font-family: Futura;
+  src: url(futura.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Futura;
+  src: url(futuraitalic.ttf);
+  font-style: italic;
+}
+
+/*shared css across all pages*/
+
+body {
+    font-family: Futura;
+    font-weight: normal;
+    background-color: #262626;
+    font-size: 20px;
+
+    }
+
+h1, h2, h3, h4{
+    font-family: Futura;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+
+.wrapper{
+    width: 80%;
+    margin: auto;
+    min-width: 1200px;
+    } /*fixed page*/
+
+/*header styling*/
+
+header {
+    height: 230px;
+    background-color: #f5f5f5; 
+    }
+
+.logo{
+    padding: 0px 30px;
+    width: 230px;
+    height: 230px;
+    } /*photo logo of home*/
+
+ .side a {
+    font-family: Futura;
+
+     color: black;
+        text-decoration: none;
+        padding: 0px 10px;
+        display: inline-block;
+        } /*side bar links*/
+
+.side {
+        float:right;
+        padding: 100px 50px 20px 10px;
+
+     } /*side bar push to right*/
+
+.icons {
+        height: 40px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+            } /*side bar icons*/
+			
+.side input[type=text] {
+        border: none;
+        font-size: 15px;
+        height: 20px;
+        margin: 10px;
+            } /*search bar*/
+
+.container{
+        margin:  auto; /* Center the header div horizontally */
+    }
+
+/*cart page styling*/
+
+#carttable{
+    border: 0px;
+    border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#carttable th:nth-child(odd) { 
+    background-color: #262626;
+    padding: 15px;
+    text-align: center;
+	color: #FFFFFF;
+}
+
+#carttable th:nth-child(even){
+    padding: 15px;
+    text-align: center;
+    background-color: #262626;
+	color: #FFFFFF;
+}
+
+#carttable td {
+    padding: 15px;
+    text-align: center;
+    background-color: #EEE2DF;
+    }
+
+/*order page styling*/
+
+#ordertable{
+    border: 0px;
+    border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#ordertable th { 
+    background-color: #262626;
+    padding: 15px;
+    text-align: center;
+	color: #FFFFFF;
+}
+
+#ordertable td {
+    padding: 15px;
+    text-align: center;
+    background-color: #EEE2DF;
+    }
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+/*content index page*/
+.categories {
+		height: 350px;
+        display: block;
+        margin-left: 10px;
+        margin-right: 10px;
+            } /*homepage categories*/
+			
+.box1 {
+       background-color: #f5f5f5;
+    } /*first container*/
+
+.slideshow {
+  background-image: url('outfit.jpg');
+  height: 400px;
+  position: relative
+
+}
+
+.box1content {
+        padding: 10px 30px;
+    } /*intro content*/
+
+.slidepic {
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+        padding: 50px 50px;
+        text-align: center;
+        top: 50%;  
+        transform: translate(0, -50%)
+
+    } /*centered*/
+
+
+#floatright { margin: 10px 30px;
+             float: right;
+     } /*picture in intro */
+
+.section2 {
+      background-color: #EEE2DF;
+
+} /*second container*/
+
+.insidesection2 {
+       padding: 10px 30px;
+        } /*content in second section*/
+
+.insidesection2 td {
+       font-size: 27px;
+	   text-align: center;
+	   font-weight: bold;
+	   padding-top: 22px;
+        } 
+
+.insidesection2 table {
+       margin-bottom: 80px
+        } 
+
+.insidesection2 a {
+		color: inherit; 
+		text-decoration: inherit;
+		}
+/*contact form page*/
+
+#contactform label {
+        float: left;
+        clear: left;
+        display: block;
+        width: 120px;
+        text-align: left;
+        padding-right:30px;
+       } /*name, email, etc*/
+
+#contactform input[type="text"], textarea {
+        display:block;
+        width: 300px;
+        } /*text boxes*/
+
+#contactform input[type="checkbox"]{
+        transform: scale(1.5);
+        } /*terms and conditions checkbox*/
+
+#contactform input[type="submit"]{
+        display:block;
+        width: 100px;
+        height: 35px;
+        background-color: #EEE2DF;
+		cursor: pointer;
+		border-radius:1em;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: .7em;
+		letter-spacing: 1.5px;
+        } /*submit form button*/
+		
+#contactform input[type="submit"]:hover {
+  background-color: #FFFFFF;
+}
+
+#contactform span{
+          margin: 20px;
+        } /*terms and conditions */
+
+/*login page*/
+#loginform {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#loginform label {
+        display:block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 10px;
+        display: block;
+        width: 80px;
+        text-align: center;
+       } 
+
+#loginform input[type="text"] {
+        display:block;
+		margin-left: auto;
+		margin-right: auto;
+        width: 200px;
+        } /*email box*/
+
+#loginform input[type="password"] {
+        display:block;
+		margin-left: auto;
+		margin-right: auto;
+        width: 200px;
+} /*passwordbox*/
+
+
+#loginform input[type="submit"]{
+        display:block;
+        width: 100px;
+        height: 35px;
+        background-color: #EEE2DF;
+		cursor: pointer;
+		border-radius:1em;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: .7em;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+        } /*login button*/
+
+#loginform input[type="submit"]:hover {
+  background-color: #FFFFFF;
+}
+/*register page*/
+
+#newuserform label {
+        margin-left: auto;
+		margin-right: auto;
+        display: block;
+        width: 150px;
+        text-align: center;
+       } /*name, email, etc*/
+
+#newuserform input[type="password"] {
+        display:block;
+		margin-left: auto;
+		margin-right: auto;
+        width: 200px;
+} /*passwordbox*/
+
+#newuserform #Name{
+        display:block;
+		margin-left: auto;
+		margin-right: auto;
+        width: 200px;
+        } 
+
+#newuserform #Contact{
+        display:block;
+		margin-left: auto;
+		margin-right: auto;
+        width: 200px;
+        } 
+
+#newuserform #Email{
+        display:block;
+		margin-left: auto;
+		margin-right: auto;
+        width: 200px;
+        } 
+
+#newuserform input[type="submit"]{
+        display:block;
+        width: 110px;
+        height: 35px;
+        background-color: #EEE2DF;
+		cursor: pointer;
+		border-radius:1em;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: .7em;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+        } /*login button*/
+
+#newuserform input[type="submit"]:hover {
+  background-color: #FFFFFF;
+}
+
+.center {
+		margin-left: auto;
+		margin-right: auto;
+		width: 45%;
+}
+/*button*/
+.button {
+  display: flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #262626;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #262626;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+a {
+  color: #262626;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+#button-1 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#button-1 a {
+  position: relative;
+  transition: all .35s ease-Out;
+}
+
+#slide {
+  width: 100%;
+  height: 100%;
+  left: -200px;
+  background: #262626;
+  position: absolute;
+  transition: all .35s ease-Out;
+  bottom: 0;
+}
+
+#button-1:hover #slide {
+  left: 0;
+}
+
+#button-1:hover a {
+  color: #FFFFFF;
+}
+
+
+/*footer styling*/
+
+footer {
+    
+    background-color: #262626;
+    color: #dcd3ce;
+    height: 50px;
+    }
+
+.footertext{
+    text-align: center;
+    padding: 5px;
+	padding-top: 20px
+    }
