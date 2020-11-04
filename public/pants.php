@@ -79,7 +79,7 @@
 					$item_list = findDishByCategory($category["id"]);
 					while ($item = $item_list->fetch_assoc()){
 						echo '<div class ="column">';
-						echo '<h3>' . $item["dish_name"] . '</h3>';
+						echo '<h3>' . $item["prod_name"] . '</h3>';
 						echo '<img src="menu photos/' . $item['id'] .'.jpg" alt="Ground Fashion" class="productimage" id="center">';
 						echo "<h3>$" . $item["price"] . "</h3>";
                     
@@ -88,7 +88,7 @@
 							echo '<p class="quantity">Quantity:</p>';
 							echo '<div class="quantity"><input value="0" min="0" name="quantity" type="number"></div>';
 							echo '<input value=' . $item["id"] . ' name="item" type="hidden"><br>';
-							echo '<input value="' . $item["dish_name"] . '" name="itemName" type="hidden">';
+							echo '<input value="' . $item["prod_name"] . '" name="itemName" type="hidden">';
 							echo '<input value="' . $item["price"] . '" name="itemPrice" type="hidden">';
 							echo '<input value="Add to Cart"  type="submit" id="center" class="addtocart">';
 							echo '<br><br></form>';

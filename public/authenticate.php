@@ -15,8 +15,10 @@
     else {
         
         if (password_verify($_POST['Password'], $user['h_password'])) {
+			
+			$loggedInUser =  $user['user_role'];
             
-            $loggedInUser =  array ('id' => $user['id'], 'role' => $user['user_role']);
+            //$loggedInUser =  array ('id' => $user['id'], 'role' => $user['user_role']);
             
             $_SESSION['user'] = $loggedInUser;
             

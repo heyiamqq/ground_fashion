@@ -73,41 +73,49 @@
         ?>
         <div>
             <?php while($category = $category_list->fetch_assoc()) {
-				if ($category["cat_name"] == "Jacket") {
-					echo '<div class="category">'; 
-					echo '<h1>'. $category["cat_name"] .'</h1>'; 
-					$item_list = findDishByCategory($category["id"]);
-					while ($item = $item_list->fetch_assoc()){
-						echo '<div class ="column">';
-						echo '<h3>' . $item["prod_name"] . '</h3>';
-						echo '<img src="menu photos/' . $item['id'] .'.jpg" alt="Ground Fashion" class="productimage" id="center">';
-						echo "<h3>$" . $item["price"] . "</h3>";
+                echo '<div class="category">'; 
+                echo '<h1>'. $category["cat_name"] .'</h1>'; 
+                $item_list = findDishByCategory($category["id"]);
+                while ($item = $item_list->fetch_assoc()){
+                    echo '<div class ="column">';
+                    echo '<h3>' . $item["prod_name"] . '</h3>';
+                    echo '<img src="menu photos/' . $item['id'] .'.jpg" alt="Ground Fashion" class="productimage" id="center">';
+                    echo "<h3>$" . $item["price"] . "</h3>";
+                    $newprice = $item["prod_name"]."new";
+					
+					
+                    if (isset($_SESSION['user'])){
+                        echo '<form action="menu_update_con.php" method="post">';
+                        //echo '<table>';
+                        //echo '<tr>';
+						echo '<p class="quantity">Price:</p>';
+					echo '<div class="quantity"><input value=' . $item["price"] . ' min="0" name="'.$newprice.'" type="text"></div>';
+                        //echo '</tr>';
+						//echo '</table>';
+
+                        echo '<input value=' . $item["id"] . ' name="item" type="hidden"><br>';
+                        echo '<input value="' . $item["prod_name"] . '" name="itemName" type="hidden">';
+                        echo '<input value="' . $item["price"] . '" name="itemPrice" type="hidden">';
+                        echo '<input value="Update"  type="submit" id="center" class="addtocart">';
+                        echo '<br><br></form>';
+                    }
+
                     
-						if (isset($_SESSION['user'])){
-							echo '<form method="get" action=' . $_SERVER["PHP_SELF"].'>';
-							echo '<p class="quantity">Quantity:</p>';
-							echo '<div class="quantity"><input value="0" min="0" name="quantity" type="number"></div>';
-							echo '<input value=' . $item["id"] . ' name="item" type="hidden"><br>';
-							echo '<input value="' . $item["prod_name"] . '" name="itemName" type="hidden">';
-							echo '<input value="' . $item["price"] . '" name="itemPrice" type="hidden">';
-							echo '<input value="Add to Cart"  type="submit" id="center" class="addtocart">';
-							echo '<br><br></form>';
-						}
-          
-						echo '</ul>';
-						echo '</div>';
-					}
-					echo '</div>';
-				}
+                    echo '</ul>';
+                    echo '</div>';
+                    
+        
+                }
+                echo '</div>';
+                
             }
             ?>
-        
         
         
 
         </div>
         <?php if(isset($_SESSION['user'])){
-            echo'
+			echo'
 				 <div class="button" id="button-2">
 					<div id="slide"></div>
 					<a href="cart.php">Go To Cart</a>

@@ -75,7 +75,7 @@ INSERT INTO `itemprice` (`ID`, `Item`, `Price`, `TypeOfShot`, `SaleAmount`) VALU
 
 CREATE TABLE IF NOT EXISTS `menu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `dish_name` varchar(50) NOT NULL,
+  `prod_name` varchar(50) NOT NULL,
   `price` double(5,2) NOT NULL,
   `cat_id` int(11) NOT NULL,
   `dish_description` varchar(255) DEFAULT NULL,
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
 -- Dumping data for table `menu`
 --
 
-INSERT INTO `menu` (`id`, `dish_name`, `price`, `cat_id`, `dish_description`, `available`) VALUES
+INSERT INTO `menu` (`id`, `prod_name`, `price`, `cat_id`, `dish_description`, `available`) VALUES
 (1, 'One Shoulder Top', 29.00, 1, '', 1),
 (2, 'Floral Printed Shirt', 32.00, 1, '', 1),
 (3, 'Manhattan Graphic Tee\n', 25.00, 1, '', 1),
